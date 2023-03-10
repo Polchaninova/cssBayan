@@ -1,11 +1,27 @@
 .active__title {
   margin-bottom: 40px;
 }
-.accordion-list label + input[type="radio"]{
+
+.accordion-list label + input[type="radio"] {
   display: none;
 }
+.content-accordion {
+  padding: 0 10px;
+  line-height: 1.2;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: opacity 1050ms $timing-function;
+}
+
+
+
 .accordion-list label+input[type="radio"]:checked + .content-accordion {
   max-height: 568px;
+  opacity: 1;
+  visibility: visible;
+  overflow: auto;
 }
 
 .accordion-list {
@@ -39,18 +55,8 @@
     font-size: 20px;
   }
 }
-.accordion__btn{
-transform:rotate(90deg);
-font-size: 30px;
-color: $color-black-light;
-}
-.content-accordion {
-  padding: 0 10px;
-  line-height: 1.2;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 250ms $timing-function;
-}
+
+
 .content-accordion__img-meme {
   margin: 0 auto;
   width: 100%;
@@ -64,3 +70,30 @@ color: $color-black-light;
     width: 650px;
   }
 }
+.accordion__btn{
+  font-size: 30px;
+}
+.accordion__btn .close{
+display: none;
+}
+.accordion__btn:hover .open{
+display: none;
+}
+.accordion__btn:hover .close {
+  display: block;
+}
+.accordion__btn:hover{
+  cursor: pointer;
+}
+
+.list__display:hover .accordion__btn{
+  display: block;
+  font-size: 30px;
+  color: $color-black-light;
+
+}
+
+// .accordion__btn::after + .active:hover{
+//   content: "+";
+//   transform: rotate(90deg);
+// }
