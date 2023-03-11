@@ -26,11 +26,16 @@ li {
 body {
   font-family: $font-primary;
   background-color: $color-orange;
+  color: $color-black-light;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
 
   &.is-open {
     overflow: hidden;
   }
 }
+
 a {
   display: block;
   text-decoration: none;
@@ -43,12 +48,14 @@ li {
 img {
   display: block;
 }
-button{
+
+button {
   padding: 0;
   border: 0;
   background-color: transparent;
   border-color: transparent;
 }
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -61,18 +68,20 @@ button{
   }
 }
 
-.title{
-  color:$color-primary-black;
+.title {
+  color: $color-primary-black;
   font-family: $font-accept;
   font-size: 26px;
-  font-weight:700;
+  font-weight: 700;
   line-height: 1.14;
   text-align: center;
-    @media screen and (min-width: 820px) {
-font-size: 36px;
-    }
-      @media screen and (min-width: 1080px) {
-font-size: 46px;
-      }
+
+  @media screen and (min-width: 820px) {
+    font-size: 36px;
+  }
+
+  @media screen and (min-width: 1080px) {
+    font-size: 46px;
+  }
 
 }
