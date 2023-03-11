@@ -36,7 +36,7 @@
   max-height: 0px;
   opacity: 0;
   padding: 10px 15px;
-  transition: opacity 250ms ease-in-out 0s;
+  transition: opacity 550ms $timing-function, max-height 550ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .accordion__title:hover~.content-accordion,
@@ -44,7 +44,7 @@
   display: block;
   opacity: 1;
   max-height: 700px;
-  transition: opacity 250ms $timing-function;
+  transition: opacity 250ms $timing-function, max-height 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 input:checked~.content-accordion {
@@ -57,6 +57,21 @@ input:checked~.content-accordion {
 
 .input:checked~.accordion__title {
   background-color: $color-blue-light;
+}
+
+.content-accordion__img-meme {
+
+  margin: 0 auto;
+  width: 235px;
+  max-height: 443px;
+
+  @media screen and (min-width:568px) {
+    width: 440px;
+  }
+
+  @media screen and (min-width:820px) {
+    width: 600px;
+  }
 }
 
 // li
@@ -74,6 +89,7 @@ input:checked~.content-accordion {
 
 // label - name question;
 .accordion__title {
+  font-size: 14px;
   position: relative;
   display: block;
   padding: 10px 5px;
@@ -90,11 +106,26 @@ input:checked~.content-accordion {
     font-size: 20px;
     padding: 10px 15px;
   }
+
+  @media screen and (min-width:820px) {
+    font-size: 22px;
+    padding: 10px 15px;
+  }
+
+  @media screen and (min-width:1080px) {
+    font-size: 22px;
+    padding: 10px 15px;
+  }
 }
+
+// .accordion__item>.accordion__title::after {
+//   content: " ";
+//   opacity: 0;
+//   font-size: 0;
+// }
 
 .accordion__title::after {
   content: "+";
-
   position: absolute;
   top: 50%;
   right: 15px;
@@ -103,91 +134,25 @@ input:checked~.content-accordion {
   font-size: 30px;
   color: red;
 }
+
 .accordion__title:hover::after {
   content: "×";
+
+  // opacity: 1;
+  // font-size: 16px;
 }
+
 .input:checked~.accordion__title::after {
   content: "×";
+
+  // opacity: 1;
+  // font-size: 16px;
 }
 
 
 
-// .accordion__title::after {
-//   content: " ";
-//   display: block;
-//   width: 16px;
-//   height: 16px;
-
-//   position: absolute;
-//   top: 50%;
-//   right: 15px;
-//   transform: translateY(-50%);
-//   background-color:red;
-//   color: black;
-
-// }
-
-// span + btn + svg;
-// .close,
-// .open {
-//   width: 30px;
-//   height: 30px;
-//   fill: red;
-// }
-
-.accordion__btn {}
 
 
-// .accordion__title::after {
-//   content: "+";
-
-//     position: absolute;
-//     top: 50%;
-//     right: 15px;
-//     transform: translateY(-50%);
-
-//     font-size: 30px;
-//     color: red;
-// }
-
-// .input:checked~.accordion__title::after {
-//   content: "×";
-// }
-// .accordion__btn .close {
-//   display: none;
-
-// }
-
-// .accordion__btn .open {
-//   display: none;
-
-// }
-
-// .accordion__btn:hover.open {
-//   display: none;
-// }
-
-// .accordion__btn:hover.close {
-//   display: block;
-// }
-
-// .accordion__btn:hover {
-//   cursor: pointer;
-// }
-
-.content-accordion__img-meme {
-  margin: 0 auto;
-  width: 235px;
-  max-height: 443px;
-
-  @media screen and (min-width:568px) {
-    width: 440px;
-  }
-
-  @media screen and (min-width:820px) {
-    width: 600px;
-  }
-}
 
 
 
@@ -254,4 +219,66 @@ input:checked~.content-accordion {
 //   visibility: visible;
 //   overflow: auto;
 //   display: block;
+// }
+// .accordion__title::after {
+//   content: " ";
+//   display: block;
+//   width: 16px;
+//   height: 16px;
+
+//   position: absolute;
+//   top: 50%;
+//   right: 15px;
+//   transform: translateY(-50%);
+//   background-color:red;
+//   color: black;
+
+// }
+
+// span + btn + svg;
+// .close,
+// .open {
+//   width: 30px;
+//   height: 30px;
+//   fill: red;
+// }
+
+.accordion__btn {}
+
+
+// .accordion__title::after {
+//   content: "+";
+
+//     position: absolute;
+//     top: 50%;
+//     right: 15px;
+//     transform: translateY(-50%);
+
+//     font-size: 30px;
+//     color: red;
+// }
+
+// .input:checked~.accordion__title::after {
+//   content: "×";
+// }
+// .accordion__btn .close {
+//   display: none;
+
+// }
+
+// .accordion__btn .open {
+//   display: none;
+
+// }
+
+// .accordion__btn:hover.open {
+//   display: none;
+// }
+
+// .accordion__btn:hover.close {
+//   display: block;
+// }
+
+// .accordion__btn:hover {
+//   cursor: pointer;
 // }
