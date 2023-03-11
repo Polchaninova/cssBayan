@@ -1,14 +1,18 @@
+
+
 .active__title {
   margin-bottom: 40px;
 }
 
 // ul
 .accordion-list {
-  width: 568px;
-
-  @media screen and (min-width:820px) {
-  width: 820px;
-  }
+margin: 0 auto;
+  @media screen and (min-width:480px) {
+      width: 480px;
+    }
+    @media screen and (min-width:820px) {
+      width: 650px;
+    }
 
   &:hover .accordion__btn {
     display: block;
@@ -86,8 +90,9 @@ input:checked~.content-accordion {
 .accordion__item {
   // width: 100%;
   margin-bottom: 10px;
-  border: 2px solid $fill-svg-grey;
+  border: 2px solid $fill-grey;
   cursor: auto;
+  transition: cursor 250ms $timing-function;
 
   &:hover {
     cursor: pointer;
@@ -154,14 +159,14 @@ input:checked~.content-accordion {
 // }
 .content-accordion__img-meme {
   margin: 0 auto;
-  width: 100%;
+  width: 235px;
   max-height: 443px;
 
   @media screen and (min-width:568px) {
-    width: 450px;
+    width: 440px;
   }
 
   @media screen and (min-width:820px) {
-    width: 650px;
+    width: 600px;
   }
 }

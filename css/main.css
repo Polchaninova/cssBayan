@@ -5,14 +5,19 @@
 
 @media screen and (min-width: 568px) {
   .container {
-    width: 568px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (min-width: 820px) {
   .container {
-    width: 820px;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
   }
 }
 html {
@@ -73,13 +78,13 @@ button {
 }
 
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 1080px) {
   .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -107,11 +112,16 @@ button {
 }
 
 .accordion-list {
-  width: 568px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .accordion-list {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 820px) {
   .accordion-list {
-    width: 820px;
+    width: 650px;
   }
 }
 .accordion-list:hover .accordion__btn {
@@ -159,6 +169,7 @@ input:checked ~ .content-accordion {
   margin-bottom: 10px;
   border: 2px solid #afb1b8;
   cursor: auto;
+  transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .accordion__item:hover {
   cursor: pointer;
@@ -202,16 +213,16 @@ input:checked ~ .content-accordion {
 
 .content-accordion__img-meme {
   margin: 0 auto;
-  width: 100%;
+  width: 235px;
   max-height: 443px;
 }
 @media screen and (min-width: 568px) {
   .content-accordion__img-meme {
-    width: 450px;
+    width: 440px;
   }
 }
 @media screen and (min-width: 820px) {
   .content-accordion__img-meme {
-    width: 650px;
+    width: 600px;
   }
 }/*# sourceMappingURL=main.css.map */
