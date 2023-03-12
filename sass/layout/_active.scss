@@ -98,10 +98,10 @@ input:checked~.content-accordion {
   padding: 10px 5px;
   transition: background-color 250ms $timing-function, color 250ms $timing-function;
   cursor: pointer;
+  animation-timing-function: linear;
 
 
-
-  &:visited
+  &:visited,
   &:focus,
   &:hover,
   &:active {
@@ -126,46 +126,67 @@ input:checked~.content-accordion {
   }
 }
 
-.accordion-list {
-  &:hover .accordion__title::after {
-    visibility: visible;
-    transition: visibility 1000ms linear;
-  }
+.card__svg {
+  width: 18px;
+  height: 100%;
 }
 
-.accordion-list .input:checked~.accordion__title::after {
-  visibility: visible;
-}
-
-.accordion__title::after {
-  visibility: hidden;
-}
-
-.accordion__title::after {
-  content: "+";
+.open {
   position: absolute;
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
-  font-weight: 700;
-  font-size: 30px;
-  color: $color-black-light;
-  transition: opacity 250ms $timing-function;
+  transition: transform 250ms $timing-function;
 }
 
-.accordion__title:hover::after {
-  content: "×";
-  color: $color-second-white;
-  transition: opacity 250ms $timing-function;
+.input:checked~.accordion__title .card__svg,
+.accordion__item:hover .card__svg {
+  transform: rotate(45deg);
+  fill: $fill-grey;
+  font-weight: bolder;
 }
 
-.input:checked~.accordion__title::after {
 
-  transition: opacity 250ms $timing-function;
-  color: $color-second-white;
-  content: "×";
+// .accordion-list {
+//   &:hover .accordion__title::after {
+//     visibility: visible;
+//     transition: visibility 1000ms linear;
+//   }
+// }
 
-}
+// .accordion-list .input:checked~.accordion__title::after {
+//   visibility: visible;
+// }
+
+// .accordion__title::after {
+//   visibility: hidden;
+// }
+
+// .accordion__title::after {
+//   content: "+";
+//   position: absolute;
+//   top: 50%;
+//   right: 15px;
+//   transform: translateY(-50%);
+//   font-weight: 700;
+//   font-size: 30px;
+//   color: $color-black-light;
+//   transition: opacity 250ms $timing-function;
+// }
+
+// .accordion__title:hover::after {
+//   content: "×";
+//   color: $color-second-white;
+//   transition: opacity 250ms $timing-function;
+// }
+
+// .input:checked~.accordion__title::after {
+
+//   transition: opacity 250ms $timing-function;
+//   color: $color-second-white;
+//   content: "×";
+
+// }
 
 
 
