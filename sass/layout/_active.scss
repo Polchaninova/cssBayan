@@ -93,9 +93,11 @@ input:checked~.content-accordion {
 
 // label - name question;
 .accordion__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 14px;
-  position: relative;
-  display: block;
+
   padding: 10px 5px;
   transition: background-color 250ms $timing-function, color 250ms $timing-function;
   cursor: pointer;
@@ -127,10 +129,6 @@ input:checked~.content-accordion {
 }
 
 .open {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
   transition: transform 250ms $timing-function;
 }
 
@@ -138,7 +136,5 @@ input:checked~.content-accordion {
 .accordion__item:hover .card__svg {
   transform: rotate(45deg);
   fill: $fill-grey;
-  font-weight: bolder;
+
 }
-
-

@@ -195,9 +195,10 @@ input:checked ~ .content-accordion {
 }
 
 .accordion__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 14px;
-  position: relative;
-  display: block;
   padding: 10px 5px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -227,10 +228,6 @@ input:checked ~ .content-accordion {
 }
 
 .open {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -238,5 +235,4 @@ input:checked ~ .content-accordion {
 .accordion__item:hover .card__svg {
   transform: rotate(45deg);
   fill: #6d6e72;
-  font-weight: bolder;
 }/*# sourceMappingURL=main.css.map */
