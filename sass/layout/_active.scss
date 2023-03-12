@@ -1,5 +1,5 @@
 .active__title {
-  margin-bottom: 40px;
+  margin-bottom: 1.8rem;
 }
 
 // ul
@@ -7,17 +7,11 @@
   margin: 0 auto;
 
   @media screen and (min-width:480px) {
-    width: 480px;
+    width: 30rem;
   }
 
   @media screen and (min-width:820px) {
-    width: 650px;
-  }
-
-  &:hover .accordion__btn {
-    display: block;
-    font-size: 30px;
-    color: $color-black-light;
+    width: 40rem;
   }
 
 }
@@ -80,7 +74,7 @@ input:checked~.content-accordion {
 
 // li
 .accordion__item {
-  // width: 100%;
+  width: 100%;
   margin-bottom: 10px;
   border: 2px solid $fill-grey;
   cursor: auto;
@@ -94,6 +88,7 @@ input:checked~.content-accordion {
 // label - name question;
 .accordion__title {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;

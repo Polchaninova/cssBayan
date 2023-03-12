@@ -29,13 +29,9 @@ body {
   font-family: $font-primary;
   background-color: $color-orange;
   color: $color-black-light;
-  font-size: 18px;
+  font-size: 1, 12rem;
   font-weight: 500;
   line-height: 1.2;
-
-  &.is-open {
-    overflow: hidden;
-  }
 }
 
 a {
@@ -59,31 +55,28 @@ button {
 }
 
 .section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 
   @media screen and (min-width: 820px) {}
 
-  @media screen and (min-width: 1080px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
+  @media screen and (min-width: 1080px) {}
 }
 
 .title {
   color: $color-primary-black;
   font-family: $font-accept;
-  font-size: 26px;
+  font-size: 1.16rem;
   font-weight: 700;
   line-height: 1.14;
   text-align: center;
 
   @media screen and (min-width: 820px) {
-    font-size: 36px;
+    font-size: 2.2rem;
   }
 
   @media screen and (min-width: 1080px) {
-    font-size: 46px;
+    font-size: 2.8rem;
   }
 
 }

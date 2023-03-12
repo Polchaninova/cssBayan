@@ -51,12 +51,9 @@ body {
   font-family: "Roboto";
   background-color: #fcfcdb;
   color: #2f303a;
-  font-size: 18px;
+  font-size: 1, 12rem;
   font-weight: 500;
   line-height: 1.2;
-}
-body.is-open {
-  overflow: hidden;
 }
 
 a {
@@ -80,37 +77,30 @@ button {
 }
 
 .section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
-@media screen and (min-width: 1080px) {
-  .section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
 .title {
   color: #212121;
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
+  font-size: 1.16rem;
   font-weight: 700;
   line-height: 1.14;
   text-align: center;
 }
 @media screen and (min-width: 820px) {
   .title {
-    font-size: 36px;
+    font-size: 2.2rem;
   }
 }
 @media screen and (min-width: 1080px) {
   .title {
-    font-size: 46px;
+    font-size: 2.8rem;
   }
 }
 
 .active__title {
-  margin-bottom: 40px;
+  margin-bottom: 1.8rem;
 }
 
 .accordion-list {
@@ -118,18 +108,13 @@ button {
 }
 @media screen and (min-width: 480px) {
   .accordion-list {
-    width: 480px;
+    width: 30rem;
   }
 }
 @media screen and (min-width: 820px) {
   .accordion-list {
-    width: 650px;
+    width: 40rem;
   }
-}
-.accordion-list:hover .accordion__btn {
-  display: block;
-  font-size: 30px;
-  color: #2f303a;
 }
 
 .input {
@@ -185,6 +170,7 @@ input:checked ~ .content-accordion {
 }
 
 .accordion__item {
+  width: 100%;
   margin-bottom: 10px;
   border: 2px solid #6d6e72;
   cursor: auto;
@@ -196,6 +182,7 @@ input:checked ~ .content-accordion {
 
 .accordion__title {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
